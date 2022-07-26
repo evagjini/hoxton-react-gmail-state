@@ -1,17 +1,14 @@
-import Header from './components/Header'
+import Header from "./components/Header";
 
-import initialEmails from './data/emails'
+import initialEmails from "./data/emails";
 
-import './App.css'
-import { useState } from 'react'
-
-
+import "./App.css";
+import { useState } from "react";
 
 function App() {
   // Use initialEmails for state
   console.log(initialEmails);
   const [emails, setEmmails] = useState(initialEmails);
-  const [hideRead, setHideREad] = useState(false)
 
   const emailsCopy = JSON.parse(JSON.stringify(emails));
 
@@ -86,8 +83,6 @@ function App() {
               <div className="title">{email.title}</div>
             </li>
           ))}
-
-
         </ul>
       </main>
     </div>
